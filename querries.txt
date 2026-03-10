@@ -1,0 +1,44 @@
+Part 1:
+query:
+?- filter_positive([-3, 0, 5, -1, 8], L).
+output:
+L = [5, 8].
+query:
+?- transform_sign([-3, 0, 5, -1], L).
+output:
+L = [negative, zero, positive, negative].
+
+Part 2:
+query:
+?- list_sum([2,4,6], S), list_product([2,4,6], P).
+output:
+S = 12,
+P = 48.
+
+Part 3:
+query:
+?- classify_list([], C).
+output:
+C = empty.
+query:
+?- classify_list([a], C).
+output:
+C = single.
+query:
+?- classify_list([a,b,c], C).
+output:
+C = short.
+query:
+?- classify_list([a,b,c,d,e,f,g], C).
+output:
+C = long.
+
+Part 4:
+query:
+?- flatten_list([1,[2,[3,4],5],6], F).
+output:
+F = [1, 2, 3, 4, 5, 6].
+query:
+?- flatten_list([[a,b],[c,[d,e],f],g], F).
+output:
+F = [a, b, c, d, e, f, g].

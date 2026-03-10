@@ -1,0 +1,110 @@
+Prolog Assignment: Advanced List Processing and Control Flow
+
+Objective
+
+Implement a collection of Prolog predicates that perform complex operations on lists — including filtering, transformation, aggregation, and conditional branching (switch-style control).
+This assignment focuses on recursion, list manipulation, and Prolog’s control structures.
+
+ 
+
+Problem Statement
+
+You will design a List Utility Module with predicates that process lists of numbers and symbols.
+Each part must be implemented recursively (no built-ins like sum_list/2, max_list/2, etc.), and at least one part must use switch-like control (e.g., -> ; or multi-clause selection).
+
+ 
+
+Part 1 : Filter and Transform
+
+Implement:
+
+filter_positive(InputList, OutputList)
+
+that keeps only the positive numbers from the list.
+
+Then extend it:
+
+transform_sign(InputList, OutputList)
+
+which replaces:
+
+Positive numbers with the atom positive
+Zero with zero
+Negative numbers with negative
+Example:
+
+?- transform_sign([-3, 0, 5, -1]).
+
+OutputList = [negative, zero, positive, negative].
+
+Use recursion and pattern matching for traversal.
+
+ 
+
+Part 2 :Aggregation with Recursion
+
+Implement:
+
+list_sum(List, Sum)
+
+that recursively computes the sum of a list of numbers.
+Then implement:
+
+list_product(List, Product)
+
+that recursively computes the product.
+
+Test both with:
+
+?- list_sum([2,4,6], S), list_product([2,4,6], P).
+
+S = 12, P = 48.
+
+ 
+
+Part 3 : Conditional Branching (“Switch”)
+
+Implement a predicate that classifies a list based on its length:
+
+classify_list(List, Classification)
+
+Rules:
+
+If the list is empty → Classification = empty
+If it has one element → Classification = single
+If it has between 2 and 5 elements → Classification = short
+If it has more than 5 elements → Classification = long
+Use conditional branching (-> ;) or multiple clause heads (like a switch).
+
+Example:
+
+?- classify_list([a,b,c], C).
+
+C = short.
+
+ 
+
+Part 4 :  Nested List Flattening
+
+Implement:
+
+flatten_list(NestedList, FlatList)
+
+Example:
+
+?- flatten_list([1,[2,[3,4],5],6], F).
+
+F = [1,2,3,4,5,6].
+
+You must not use the built-in flatten/2.
+This tests recursion, list concatenation, and pattern handling.
+
+ 
+
+Deliverables
+
+Submit a single .pl file containing:
+
+All predicate definitions
+Example test queries
+Comments explaining recursive and control-flow logic
