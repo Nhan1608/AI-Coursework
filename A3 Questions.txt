@@ -1,0 +1,96 @@
+Assignment #3; Prolog and Constraint Satisfaction Problems (CSPs)
+Total Marks: 10
+
+Objective
+Learn to model and solve a Constraint Satisfaction Problem (CSP) in Prolog using CLP(FD), and explore the effects of different search strategies on solution finding.
+
+Background
+A CSP involves assigning values from predefined domains to a set of variables such that all constraints are satisfied. CLP(FD) in Prolog allows you to:
+
+Declare variable domains
+
+Post constraints
+
+Search for solutions using various strategies
+
+Forward checking (constraint propagation) occurs automatically when constraints are posted, helping prune impossible assignments early.
+
+Problem: Magic Triangle
+A magic triangle has 6 nodes labeled 
+A
+,
+B
+,
+C
+,
+D
+,
+E
+,
+F
+. Each node must contain a distinct integer from 1 to 6. The sum of the numbers on each side of the triangle must be equal:
+
+Side 1: 
+A
++
+B
++
+C
+
+
+Side 2: 
+C
++
+D
++
+E
+
+Side 3: 
+E
++
+F
++
+A
+
+
+Tasks (10 Marks)
+Model the CSP (3 Marks)
+
+Declare variables 
+A
+,
+B
+,
+C
+,
+D
+,
+E
+,
+F
+ with domain 1–6.
+
+Ensure all variables are distinct (all_different/1).
+
+Post Constraints (3 Marks)
+
+Ensure the sum of each side is equal.
+
+Search for Solutions Using Different Strategies (3 Marks)
+
+Use the following labeling strategies with labeling/2:
+
+Default ([]): Assign variables left-to-right in ascending order.
+
+First-Fail (ff): Choose the variable with the smallest remaining domain first.
+
+Minimum (min): Choose the variable with the smallest possible value first.
+
+Compare the first solution found, order of variable assignments, and the number of backtracks for each strategy.
+
+Reflection (1 Mark)
+
+Explain how forward checking / constraint propagation helps prune the search space in this problem.
+
+Identify which search strategy was most efficient and why.
+
