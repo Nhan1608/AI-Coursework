@@ -17,57 +17,21 @@ Forward checking (constraint propagation) occurs automatically when constraints 
 
 Problem: Magic Triangle
 A magic triangle has 6 nodes labeled 
-A
-,
-B
-,
-C
-,
-D
-,
-E
-,
-F
+A, B, C, D, E, F
 . Each node must contain a distinct integer from 1 to 6. The sum of the numbers on each side of the triangle must be equal:
 
-Side 1: 
-A
-+
-B
-+
-C
+Side 1: A + B + C
 
+Side 2: C + D + E
 
-Side 2: 
-C
-+
-D
-+
-E
-
-Side 3: 
-E
-+
-F
-+
-A
+Side 3: E + F + A
 
 
 Tasks (10 Marks)
 Model the CSP (3 Marks)
 
 Declare variables 
-A
-,
-B
-,
-C
-,
-D
-,
-E
-,
-F
+A, B ,C ,D ,E ,F
  with domain 1–6.
 
 Ensure all variables are distinct (all_different/1).
@@ -93,4 +57,5 @@ Reflection (1 Mark)
 Explain how forward checking / constraint propagation helps prune the search space in this problem.
 
 Identify which search strategy was most efficient and why.
+
 
