@@ -1,4 +1,4 @@
-# University-Coursework
+# AI-Coursework
 This is what I have learned and implemented with AI through my Academic journey up-to-date.
 
 This repository contains a curated collection of academic assignments from my Computer Engineering degree at York University. It serves as a reference for my foundational knowledge in logic programming, constraint satisfaction, and algorithmic optimization.
